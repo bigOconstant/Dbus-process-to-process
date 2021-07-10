@@ -6,12 +6,12 @@
 using std::cout;
 using std::endl;
 
-void onConcatenated(sdbus::Signal& signal)
+void onReceive(sdbus::Signal& signal)
 {
-    std::string concatenatedString;
-    signal >> concatenatedString;
+    std::string input;
+    signal >> input;
 
-    std::cout << "Received signal with concatenated string " << concatenatedString << std::endl;
+    std::cout << "Received signal with string " << input << std::endl;
 }
 
 int main(int argc, char *argv[])
@@ -34,10 +34,10 @@ int main(int argc, char *argv[])
 
     // Let's subscribe for the 'concatenated' signals
     const char* interfaceName = "org.wolf.Messenger";
-    MessengerProxy->registerSignalHandler(interfaceName, "messaged", &onConcatenated);
+    MessengerProxy->registerSignalHandler(interfaceName, "messaged", &onReceive);
     MessengerProxy->finishRegistration();
 
-    // Invoke concatenate on given interface of the object
+    // Invoke message on given interface of the object
     {
         auto method = MessengerProxy->createMethodCall(interfaceName, "message");
         method << argv[1];

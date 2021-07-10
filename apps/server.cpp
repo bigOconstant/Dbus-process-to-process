@@ -9,7 +9,7 @@ using std::endl;
 // Yeah, global variable is ugly
 sdbus::IObject* g_message{};
 
-void concatenate(sdbus::MethodCall call)
+void receieveMessage(sdbus::MethodCall call)
 {
     cout<<"Calling remote method"<<endl;
    
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 
     // Register D-Bus methods and signals on the Messenge object, and exports the object.
     const char* interfaceName = "org.wolf.Messenger";
-    Messenger->registerMethod(interfaceName, "message", "s", "s", &concatenate);
+    Messenger->registerMethod(interfaceName, "message", "s", "s", &receieveMessage);
     Messenger->registerSignal(interfaceName, "messaged", "s");
     Messenger->finishRegistration();
 
