@@ -44,10 +44,9 @@ int main(int argc, char *argv[])
         auto reply = MessengerProxy->callMethod(method);
         std::string result;
 
-        cout<<"About to call results"<<endl;
+        cout<<"About to call results\n"<<endl;
         reply >> result;
-        cout<<"done"<<endl;
-        
+        cout<<result<<endl; 
     }
 
  

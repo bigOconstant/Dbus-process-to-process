@@ -19,7 +19,7 @@ void receieveMessage(sdbus::MethodCall call)
     
     // Serialize resulting string to the reply and send the reply to the caller
     auto reply = call.createReply();
-    reply << "Thanks!";
+    reply << "done";
     reply.send();
 
     // Emit 'Thanks' signal

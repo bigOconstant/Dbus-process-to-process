@@ -10,7 +10,7 @@ echo "starting dbus server "
   fi
 
 echo "Write dbus address for use with client in the build folder"
-env | grep DBUS_SESSION_BUS_ADDRESS | awk '{print "export " $0}' > /cppdbus/build/.env ;
+env | grep DBUS_SESSION_BUS_ADDRESS | awk '{print "export " $0}' > /cppdbus/.env ;
 
 
 /cppdbus/build/server
