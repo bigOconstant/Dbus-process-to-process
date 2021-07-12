@@ -1,4 +1,4 @@
-# Messaging with Dbus in C++
+# Messaging with Dbus in go and C++
 
 Curious how dbus could be used for process to process communication,
 
