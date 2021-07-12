@@ -24,4 +24,4 @@ To test I suggest testing in docker-compose.
 
 1. `docker-compose build`
 2. in one terminal, `docker-compose up`
-3. In another terminal, `docker-compose exec dbuscpp /bin/bash -c "source .env && ./build/client 'hello world'"` to test the C++ client or for golang `docker-compose exec dbuscpp /bin/bash -c "source .env && ./go/src/client/main 'hello world'"`
+3. In another terminal, `docker-compose exec dbuscpp /bin/bash -c "source .env && ./build/client 'hello world'"` to test the C++ client or for golang `docker-compose exec dbuscpp /bin/bash -c "source .env && ./go/src/client/dbus 'hello world'"`
