@@ -26,7 +26,8 @@
 	"extensions": [
 		"ms-vscode.cmake-tools",
 		"ms-vscode.cpptools",
-		"nick-rudenko.back-n-forth"
+		"nick-rudenko.back-n-forth",
+		"eamodio.gitlens"
 	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

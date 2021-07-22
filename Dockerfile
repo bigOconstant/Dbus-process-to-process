@@ -42,6 +42,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
  
  USER $USERNAME
+WORKDIR /workspace
 
 CMD ["sleep", "infinity"]
 #**************************************

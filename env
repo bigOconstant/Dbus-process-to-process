@@ -1,0 +1,1 @@
+export DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-6EjqsbJDTd,guid=a28f2e14ff04ea3d16b64c7060ef731e
